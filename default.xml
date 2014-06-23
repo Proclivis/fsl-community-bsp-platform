@@ -5,6 +5,7 @@
 
   <remote fetch="git://git.yoctoproject.org" name="yocto"/>
   <remote fetch="git://github.com/Freescale" name="freescale"/>
+  <remote fetch="git://github.com/Proclivis" name="proclivis"/>
   <remote fetch="git://git.openembedded.org" name="oe"/>
 
   <project remote="yocto" revision="daisy" name="poky" path="sources/poky"/>
@@ -12,12 +13,12 @@
 
   <project remote="oe" revision="daisy" name="meta-openembedded" path="sources/meta-openembedded"/>
 
-  <project remote="freescale" revision="daisy" name="fsl-community-bsp-base" path="sources/base">
+  <project remote="proclivis" revision="daisy" name="fsl-community-bsp-base" path="sources/base">
 	<copyfile dest="README" src="README"/>
 	<copyfile dest="setup-environment" src="setup-environment"/>
   </project>
 
-  <project remote="freescale" revision="daisy" name="meta-fsl-arm-extra" path="sources/meta-fsl-arm-extra"/>
+  <project remote="proclivis" revision="daisy" name="meta-fsl-arm-extra" path="sources/meta-fsl-arm-extra"/>
   <project remote="freescale" revision="daisy" name="meta-fsl-demos" path="sources/meta-fsl-demos"/>
 
 </manifest>

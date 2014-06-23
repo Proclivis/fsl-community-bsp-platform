@@ -14,13 +14,13 @@ Download the BSP source:
 $: PATH=${PATH}:~/bin
 $: mkdir fsl-community-bsp
 $: cd fsl-community-bsp
-$: repo init -u https://github.com/Freescale/fsl-community-bsp-platform -b daisy
+$: repo init -u https://github.com/Proclivis/fsl-community-bsp-platform -b daisy
 $: repo sync
 
 Once this has complete, you will have all you need. To start a build, do:
 
 $: source ./setup-environment build
-$: bitbake core-image-minimal
+$: bitbake core-image-base
 
 You can use any directory to host your build.
 
@@ -29,24 +29,13 @@ The source code will be checked out at fsl-community-bsp/sources.
 Contributing
 ------------
 
-To contribute to this layer you should the patches for review to the
-mailing list.
-
-Mailing list:
-
-    https://lists.yoctoproject.org/listinfo/meta-freescale
-
-Source code:
-    
-    https://github.com/Freescale/fsl-community-bsp-platform
-
 When creating patches, please use something like:
 
 git format-patch -s --subject-prefix='fsl-community-bsp-platform][PATCH' origin
 
 When sending patches, please use something like:
 
-git send-email --to meta-freescale@yoctoproject.org <generated patch>
+git send-email --to mike@proclivis.com <generated patch>
 
 Using Development and Testing Branches
 --------------------------------------
@@ -55,7 +44,7 @@ Replace the 'repo init' command above with one of the following:
 
 master: for developers
 
-$: repo init -u https://github.com/Freescale/fsl-community-bsp-platform -b master
+$: repo init -u https://github.com/Proclivis/fsl-community-bsp-platform -b master
 
 master-next: for intrepid developers and testers
 
@@ -64,4 +53,4 @@ master after a testing and comment period. It's possible that master-next
 has something you want or need. But it's also possible that using
 master-next will break something that was working before. Use with caution.
 
-$: repo init -u https://github.com/Freescale/fsl-community-bsp-platform -b master-next
+$: repo init -u https://github.com/Proclivis/fsl-community-bsp-platform -b master-next
